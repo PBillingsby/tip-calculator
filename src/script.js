@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', () =>)
+document.addEventListener('DOMContentLoaded', () => {
+  event.preventDefault()
+})
 const newForm = `<form action="#" class="worker-form">
 <div class="form-group">
   <input type="text" name="worker" class="" placeholder="Worker Name">
@@ -13,3 +15,8 @@ function addWorker() {
     document.getElementById('form-block').innerHTML += newForm
   })
 }
+
+function calculateTips() {
+  console.log(event)
+}
+// FIX TO ADD WORKER WITHOUT
