@@ -1,22 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-  event.preventDefault()
+document.addEventListener("DOMContentLoaded", () => {
 })
-const newForm = `<form action="#" class="worker-form">
+const newForm = `
+<h4>Worker</h4>
 <div class="form-group">
   <input type="text" name="worker" class="" placeholder="Worker Name">
 </div>
 <div class="form-group">
   <input type="number" name="hours" placeholder="Hours Worked">
-</div>
-</form>`;
+</div>`;
+document.addEventListener('DOMContentLoaded', () => {
+  
+})
 
-function addWorker() {
-  document.getElementById('add-worker').addEventListener("click", (e) => {
-    document.getElementById('form-block').innerHTML += newForm
-  })
+function addWorker(value) {
+  document.getElementById('form-block').innerHTML = "";
+
+  for (i = 0; i < value; i++) {
+    document.getElementById('form-block').innerHTML += newForm;
+  }
 }
+
 
 function calculateTips() {
-  console.log(event)
+  cashTip = parseInt(document.getElementById('cashTips').value)
+  debugger
 }
+
 // FIX TO ADD WORKER WITHOUT
