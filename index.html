@@ -14,25 +14,26 @@
   <div class="container">
     <h1>Tip Calculator</h1>
     <div id="worker-form">
-      <select name="worker" id="addworker" onload="addWorker(1)" onchange="addWorker(value)">
-        <option value="1" selected="1">1</option>
+      <label>Add Worker:</label>
+      <select name="worker" id="addworker" onchange="addWorker(value)">
+        <option value="-" disable></option>
+        <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
       </select>
 
-      <form action="#" id="form-block">
-      </form>
-      </button>
-    </div>
-    <hr>
-    <form action="#" id="cash-form">
-      <div class="form-group">
-        <input type="number" placeholder="Hours Open" id="openHours"><br>
+      <form id="form-block">
         <input type="number" placeholder="Cash Amount" id="cashTips"><br>
         <input  type="submit" placeholder="Add Cash" onclick="calculateTips()">
+      </form>
+      
+      <div id="results">
+
       </div>
-    </form>
+     
+    </div>
+    <hr>
     
 </body>
 </html>
