@@ -3,8 +3,7 @@ function addWorker(value) {
   form.addEventListener("submit", () => {
     event.preventDefault();
   })
-  document.getElementById('form-block').innerHTML = `<input type="number" placeholder="Cash Amount" id="cashTips"><br>
-  <input  type="submit" placeholder="Add Cash" onclick="calculateTips()">`;
+  // document.getElementById('form-block').innerHTML = `<input type="number" placeholder="Cash Amount" id="cashTips">`;
   for (i = 0; i < value; i++) {
     
     const newForm = `
@@ -41,5 +40,5 @@ function returnTips(arr, cashTips) {
   arr.forEach(worker => {
     document.getElementById('results').innerHTML += `<h4>${worker.name} you made $${parseFloat(worker.hours * hourly).toFixed(2)}</h4>`;
   })
-  document.getElementById('form-block').innerHTML += ` <button type="submit" onclick="location.reload()">Reload</button>`
+  document.getElementById('results').innerHTML += ` <button type="submit" onclick="location.reload()">Reload</button>`
 }
