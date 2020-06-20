@@ -1,11 +1,13 @@
+function refreshPage() {
+  window.location.href = window.location.href
+}
 function addWorker(value) {
   const form = document.getElementById('form-block');
+  form.innerHTML = "";
   form.addEventListener("submit", () => {
     event.preventDefault();
   })
-  // document.getElementById('form-block').innerHTML = `<input type="number" placeholder="Cash Amount" id="cashTips">`;
   for (i = 0; i < value; i++) {
-    
     const newForm = `
   <div id="worker[${i + 1}]" class="worker-div">
     <h4>Worker ${i + 1}</h4>
@@ -40,5 +42,5 @@ function returnTips(arr, cashTips) {
   arr.forEach(worker => {
     document.getElementById('results').innerHTML += `<h4>${worker.name} you made $${parseFloat(worker.hours * hourly).toFixed(2)}</h4>`;
   })
-  document.getElementById('results').innerHTML += ` <button type="submit" onclick="location.reload()">Reload</button>`
+      document.getElementById('message').innerHTML += `<input type="button" onclick="refreshPage()" class="text-center" value="Reload"></input>`;
 }
